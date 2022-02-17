@@ -1,0 +1,46 @@
+{
+  "name": "turndown-plugin-gfm",
+  "version": "1.1.0-0",
+  "description": "Turndown plugin to add GitHub Flavored Markdown extensions.",
+  "keywords": [
+    "turndown",
+    "turndown-plugin",
+    "html-to-markdown",
+    "html",
+    "markdown",
+    "github-flavored-markdown",
+    "gfm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laurent22/joplin-turndown-plugin-gfm.git"
+  },
+  "license": "MIT",
+  "author": "Dom Christie",
+  "main": "lib/turndown-plugin-gfm.cjs.js",
+  "module": "lib/turndown-plugin-gfm.es.js",
+  "jsnext:main": "lib/turndown-plugin-gfm.es.js",
+  "files": [
+    "lib",
+    "dist",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-es && npm run build-iife",
+    "build-cjs": "rollup -c config/rollup.config.cjs.js && rollup -c config/rollup.config.browser.cjs.js",
+    "build-es": "rollup -c config/rollup.config.es.js && rollup -c config/rollup.config.browser.es.js",
+    "build-iife": "rollup -c config/rollup.config.iife.js",
+    "build-test": "browserify test/turndown-plugin-gfm-test.js --outfile test/turndown-plugin-gfm-test.browser.js",
+    "lint": "standard ./src/**/*.js",
+    "prepublish": "npm run build",
+    "test": "npm run build && npm run lint && node test/turndown-plugin-gfm-test.js"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "rollup": "^2.67.2",
+    "standard": "^16.0.4",
+    "turndown": "7.1.1",
+    "turndown-attendant": "0.0.3"
+  }
+}
