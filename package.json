@@ -1,22 +1,36 @@
 {
   "name": "@commenthol/turndown-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "A turndown CLI with gfm plugin enabled",
+  "keywords": [
+    "turndown",
+    "cli"
+  ],
+  "homepage": "https://github.com/commenthol/turndown-cli",
+  "bugs": {
+    "url": "https://github.com/commenthol/turndown-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/turndown-cli.git"
+  },
+  "license": "MIT",
+  "author": "commenthol <commenthol@gmail.com>",
   "main": "index.js",
   "bin": {
-    "turndown": "./bin/turndown.js"
+    "turndown": "bin/turndown.js"
   },
-  "scripts": {
-    "build": "scripts/build.sh",
-    "test": "mocha"
+  "directories": {
+    "test": "test"
   },
   "files": [
     "bin",
     "*.js"
   ],
-  "keywords": [],
-  "author": "commenthol <commenthol@gmail.com>",
-  "license": "MIT",
+  "scripts": {
+    "build": "scripts/build.sh",
+    "test": "mocha"
+  },
   "dependencies": {
     "turndown": "^7.1.1",
     "turndown-plugin-confluence-to-gfm": "^0.5.0"
@@ -24,5 +38,8 @@
   "devDependencies": {
     "mocha": "^9.2.0",
     "shelljs": "^0.8.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
