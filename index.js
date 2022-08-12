@@ -47,6 +47,7 @@ const main = async (opts) => {
   turndownService.use(tables)
   turndownService.use(strikethrough)
   turndownPluginConfluenceToGfm.confluenceGfm(turndownService)
+  turndownService.remove(['script', 'style', 'title'])
 
   const html = sourcePath
     ? await fsp.readFile(sourcePath, 'utf8')
