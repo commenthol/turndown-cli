@@ -36,7 +36,7 @@
     "turndown-plugin-confluence-to-gfm": "^0.5.0"
   },
   "devDependencies": {
-    "mocha": "^9.2.0",
+    "mocha": "^10.0.0",
     "shelljs": "^0.8.5"
   },
   "publishConfig": {
