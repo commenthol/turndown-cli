@@ -32,11 +32,11 @@
     "test": "mocha"
   },
   "dependencies": {
-    "turndown": "^7.1.1",
+    "turndown": "^7.1.2",
     "turndown-plugin-confluence-to-gfm": "^0.5.0"
   },
   "devDependencies": {
-    "mocha": "^10.0.0",
+    "mocha": "^10.2.0",
     "shelljs": "^0.8.5"
   },
   "publishConfig": {
